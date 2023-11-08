@@ -17,6 +17,7 @@
 <b>Номер телефон</b>${product.user.phoneNumber}<br>
 <hr>
 <form action="/product/delete/${product.id}" method="post">
+    <input type="hidden" name="_csrf" value="${_csrf.token}"/>
     <input type="submit" value="Удалить"/>
 </form>
 <form action="/" method="get">
